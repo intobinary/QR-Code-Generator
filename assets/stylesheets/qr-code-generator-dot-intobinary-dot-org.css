@@ -48,6 +48,8 @@ body, html { background-color: #eee; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
+@font-face{font-family:"OCR A Extended";src:url("../fonts/OCRAEXT.ttf");/*src:url("../fonts/OCRAEXT.eot") format("embedded-opentype"),url("../fonts/OCRAEXT.woff2") format("woff2"),url("../fonts/OCRAEXT.woff") format("woff"),url("../fonts/OCRAEXT.ttf") format("trutype"),url("../fonts/OCRAEXT.svg") format("svg");*/}body, html{font-family:"OCR A Extended", sans-serif;}
+		
 .section-h1 { font-size: 2em; }
 .section-title { font-size: 3em; }
 
@@ -63,6 +65,7 @@ body, html { background-color: #eee; }
 .aside .u-select,
 .u-submit-text { text-transform: lowercase; }
 .section-title { text-transform: capitalize; }
+.aside a { text-decoration: underline; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
@@ -149,8 +152,8 @@ body,
 .aside-code,
 .header-nav-list-item { align-items: center; }
 .aside-code,
-.header-nav-list-item,
-.section-content { justify-content: center; }
+.header-nav-list-item { justify-content: center; }
+.section-content { justify-content: flex-start; }
 .aside-menu-button,
 .aside-code,
 /*
