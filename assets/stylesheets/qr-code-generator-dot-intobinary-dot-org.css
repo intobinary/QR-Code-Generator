@@ -30,6 +30,8 @@ body, html { width: 100%; height: 100%; }
 .section .u-select,
 .section .u-textarea { border-color: gray; }
 
+.u-submit-wrap { background-color: black; }
+
 .aside .u-input,
 .aside .u-select { background-color: rgba(255, 255, 255, .3); }
 .js-html.is-offline .aside .u-submit-wrap { background-color: rgba(255, 255, 255, .3) !important; }
@@ -37,7 +39,8 @@ body, html { width: 100%; height: 100%; }
 body, html { background-color: #eee; }
 
 .header-nav { background-color: white; }
-.aside .u-submit-wrap { color: white; }
+.aside .u-submit-wrap,
+.aside .u-submit-text { color: white; }
 
 .section .u-input,
 .section .u-select,
@@ -63,6 +66,25 @@ body, html { background-color: #eee; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
+.header-nav-button[attrHREF="email"] { background-image: url("../images/icon_email_black.png"); }
+.header-nav-button[attrHREF="telephone"] { background-image: url("../images/icon_telephone_black.png"); }
+.header-nav-button[attrHREF="website"] { background-image: url("../images/icon_website_black.png"); }
+.header-nav-button[attrHREF="custom"] { background-image: url("../images/icon_custom_black.png"); }
+
+.u-submit.to-download .u-submit-icon { background-image: url("../images/icon_download_white.png"); }
+.u-submit.to-share .u-submit-icon { background-image: url("../images/icon_share_white.png"); }
+.u-submit.to-generate .u-submit-icon { background-image: url("../images/icon_generate_black.png"); }
+
+.u-submit-icon {
+	background-repeat: no-repeat; background-position: center;
+	background-size: cover;
+}
+.header-nav-button {
+	background-repeat: no-repeat; background-position: center;
+	background-size: 40% auto;
+}
+
+.header-nav .u-placeholder-img { visibility: hidden; }
 /*** END MEDIA ***/
 
 /*** UTILITIES ***/
@@ -99,8 +121,6 @@ body, html { background-color: #eee; }
 	margin: .25em;
 
 	border-radius: 10em;
-	
-	background-color: purple;
 }
 .u-submit-icon {
 	width: 1em;
