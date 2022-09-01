@@ -124,7 +124,7 @@ function changePageSection() {
 
 window.addEventListener("offline", function(event) { checkNetwork(); });
 window.addEventListener("online", function(event) { checkNetwork(); });
-window.addEventListener("load", function(event) { setup() });
+window.addEventListener("load", function(event) { checkNetwork(); setup() });
 function checkNetwork() {
 	navigator.onLine ? appOnline() : appOffline();
 }
