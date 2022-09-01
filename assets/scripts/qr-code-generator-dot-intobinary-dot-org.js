@@ -88,6 +88,9 @@ $(".js-code.is-active .js-download").click(function(e) {
 //$(".js-download").click(function(e) {
 	$(".js-download-hidden").get(0).click();
 });
+$(".js-share").click(function() {
+	window.open("whatsapp://send?text='Check out this QR Code Generator App, by Into Binary. Visit qr-code-generator.intobinary.org'")
+});
 
 function changePageSection() {
 	var thatFieldsetTag = $(".js-fieldset"),
