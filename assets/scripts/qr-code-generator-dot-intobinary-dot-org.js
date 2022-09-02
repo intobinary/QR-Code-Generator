@@ -22,10 +22,10 @@ var HTMLemail = '<input name="email" type="text" class="u-input" placeholder="Ad
 $(".js-generate").click(function() {
 	attrHREF = $(".js-menu.is-active").attr("attrHREF");
 	var thatQRCodeTag = $(".js-code"),
-		thatDownloadTag = $(".js-download");
+		thatDownloadTag = $(".js-download-hidden");
 	
 	thatQRCodeTag.attr("src", "assets/images/placeholder_qr-code_1x1.png");
-	thatDownloadTag.attr("src", "assets/images/placeholder_qr-code_1x1.png");
+	thatDownloadTag.attr("href", "assets/images/placeholder_download_1x1.png");
 	
 	var iValue = "";
 	$(".js-fieldset").children().each(function(i, item) {
@@ -68,7 +68,7 @@ $(".js-generate").click(function() {
 		thatQRCodeTag.attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + codeEncoded + "&chs=160x160&chld=L|O");
 		thatQRCodeTag.addClass("is-active");
 		
-		thatDownloadTag.attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + codeEncoded + "&chs=160x160&chld=L|O");
+		thatDownloadTag.attr("href", "https://chart.googleapis.com/chart?cht=qr&chl=" + codeEncoded + "&chs=160x160&chld=L|O");
 	}
 	else {
 		thatQRCodeTag.removeClass("is-active");
