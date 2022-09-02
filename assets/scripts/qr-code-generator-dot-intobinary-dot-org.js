@@ -87,7 +87,7 @@ $(".js-menu").click(function() {
 	
 	changePageSection();
 });
-$(".js-code.is-active .js-download").click(function() {
+$(".js-download").click(function() {
 	$(".js-download-hidden").get(0).click();
 });
 $(".js-share").click(function() {
@@ -135,7 +135,8 @@ function checkNetwork() {
 }
 function appOnline() {
 	$(".js-html").removeClass("is-offline").addClass("is-online");
-//	$(".js-code").removeClass("is-active");
+	$(".js-code").removeClass("is-active");
+	$(".js-message").html("");
 }
 function appOffline() {
 	$(".js-html").removeClass("is-online").addClass("is-offline");
@@ -144,8 +145,4 @@ function appOffline() {
 
 function setup() {
 	$(".js-menu-1 .js-menu").click();
-	
-//	checkNetwork();
-	
-//	$(".js-code").addClass("is-active");
 }
