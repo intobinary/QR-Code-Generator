@@ -23,6 +23,7 @@ body, html { width: 100%; height: 100%; }
 .header-nav-button:hover,
 .header-nav-button:active,
 .header-nav-button:focus { background-color: #03EA60; }
+.section-title { color: #03EA60; }
 
 .js-html.is-offline .aside-wrap,
 .js-html.is-offline .section .u-submit-wrap { background-color: gray !important; }
@@ -135,13 +136,13 @@ body, html { background-color: #eee; }
 /*** END UTILITIES ***/
 
 /*** COMPONENTS ***/
-body,
 .aside-code,
 .aside-menu-buttons,
 .aside-wrap,
 .header,
 .header-nav-list,
 .header-nav-list-item,
+.main,
 .section,
 .section-content { display: flex; }
 .aside-wrap,
@@ -233,12 +234,15 @@ body,
 @media screen and (max-width:50em){
 	body, html { font-size: 13px; }
 	
+	.aside { display: flex; }
+	.aside-wrap { flex: 1; }
+	
 	.aside,
 	.aside-wrap {
 		width: 100%;
 	}
 	.aside {
-		position: fixed; bottom: 0; left: 0;
+		min-height: 30%;
 	}
 	.aside-wrap {
 		position: relative;
@@ -254,11 +258,13 @@ body,
 		background-color: white;
 	}
 	.aside-code-img {
-		padding: .25em;
+//		padding: .25em;
 	}
 	
+	.main { min-height: 70%; }
+	
 	.section {
-		max-height: 70%;
+//		max-height: 70%;
 	}
 	.section-fieldset {
 		max-height: 40%;
@@ -266,6 +272,8 @@ body,
 }
 @media screen and (min-width:50em){
 	body, html { font-size: 16px; }
+	
+	body { display: flex; }
 	
 	.aside,
 	.aside-wrap {
@@ -275,14 +283,20 @@ body,
 		width: 33.333%;
 	}
 	.aside-wrap {
-		padding: 2em 1em;
+		padding-bottom: 0 !important;
 	}
 	.aside-code-img {
 		width: 66.666%;
 	}
 	.aside-menu {
 		padding: 2em 1em;
+		padding-bottom: 1.25em !important;
 	}
+	
+	.main {
+		width: 66.666%;
+	}
+	
 	.section {
 		padding: 2em 5em;
 	}
@@ -293,4 +307,6 @@ body,
 /*** END HACKS ***/
 
 /*** TO DELETE ***/
+.main { border: 1px solid red; }
+.aside { border: 1px solid yellow; }
 /*** END TO DELETE ***/

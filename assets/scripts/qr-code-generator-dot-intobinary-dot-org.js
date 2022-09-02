@@ -137,7 +137,7 @@ function appOnline() {
 }
 function appOffline() {
 	$(".js-html").removeClass("is-online").addClass("is-offline");
-	$(".js-message").html("This app works with the internet!");
+	$(".js-message").html("You are offline. This app works with the internet!");
 }
 
 function setup() {
