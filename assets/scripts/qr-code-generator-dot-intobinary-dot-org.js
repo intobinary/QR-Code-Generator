@@ -18,8 +18,8 @@ var HTMLemail = '<input name="email" type="text" class="u-input" placeholder="Ad
 	HTMLwebsite = '<input name="website" type="text" class="u-input" placeholder="Enter the website link" required />',
 	HTMLcustom = '<textarea name="custom" class="u-textarea" placeholder="Enter your custom text" required></textarea>';
 
-$(".js-html.is-online .js-generate").click(function() {
-//$(".js-generate").click(function() {
+//$(".js-html.is-online .js-generate").click(function() {
+$(".js-generate").click(function() {
 	attrHREF = $(".js-menu.is-active").attr("attrHREF");
 	var thatQRCodeTag = $(".js-code"),
 		thatDownloadTag = $(".js-download");
@@ -84,13 +84,14 @@ $(".js-menu").click(function() {
 	
 	changePageSection();
 });
-$(".js-code.is-active .js-download").click(function(e) {
-//$(".js-download").click(function(e) {
+/*
+$(".js-code.is-active .js-download").click(function() {
 	$(".js-download-hidden").get(0).click();
 });
 $(".js-share").click(function() {
-	window.open("whatsapp://send?text='Check out this QR Code Generator App, by Into Binary. Visit qr-code-generator.intobinary.org'")
+	window.open("whatsapp://send?text='Check out this QR Code Generator App, by Into Binary. Visit qr-code-generator.intobinary.org'");
 });
+*/
 
 function changePageSection() {
 	var thatFieldsetTag = $(".js-fieldset"),
@@ -124,7 +125,10 @@ function changePageSection() {
 
 window.addEventListener("offline", function(event) { checkNetwork(); });
 window.addEventListener("online", function(event) { checkNetwork(); });
-window.addEventListener("load", function(event) { checkNetwork(); setup() });
+window.addEventListener("load", function(event) {
+	checkNetwork();
+	setup();
+});
 function checkNetwork() {
 	navigator.onLine ? appOnline() : appOffline();
 }
@@ -139,7 +143,7 @@ function appOffline() {
 function setup() {
 	$(".js-menu-1 .js-menu").click();
 	
-	checkNetwork();
+//	checkNetwork();
 	
 //	$(".js-code").addClass("is-active");
 }
