@@ -23,7 +23,6 @@ body, html { width: 100%; height: 100%; }
 .header-nav-button:hover,
 .header-nav-button:active,
 .header-nav-button:focus { background-color: #03EA60; }
-.section-title { color: #03EA60; }
 
 .js-html.is-offline .aside-wrap,
 .js-html.is-offline .section .u-submit-wrap { background-color: gray !important; }
@@ -256,6 +255,8 @@ body, html { background-color: #eee; }
 		
 //		border-radius: 1.5em;
 		background-color: white;
+		
+		padding: 0 !important;
 	}
 	.aside-code-img {
 //		padding: .25em;
@@ -307,6 +308,4 @@ body, html { background-color: #eee; }
 /*** END HACKS ***/
 
 /*** TO DELETE ***/
-.main { border: 1px solid red; }
-.aside { border: 1px solid yellow; }
 /*** END TO DELETE ***/
