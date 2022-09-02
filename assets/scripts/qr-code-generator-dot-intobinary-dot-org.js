@@ -70,6 +70,9 @@ $(".js-generate").click(function() {
 		
 		thatDownloadTag.attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + codeEncoded + "&chs=160x160&chld=L|O");
 	}
+	else {
+		thatQRCodeTag.removeClass("is-active");
+	}
 	
 	codeEncoded = "";
 	codeString = "";
@@ -84,14 +87,12 @@ $(".js-menu").click(function() {
 	
 	changePageSection();
 });
-/*
 $(".js-code.is-active .js-download").click(function() {
 	$(".js-download-hidden").get(0).click();
 });
 $(".js-share").click(function() {
 	window.open("whatsapp://send?text='Check out this QR Code Generator App, by Into Binary. Visit qr-code-generator.intobinary.org'");
 });
-*/
 
 function changePageSection() {
 	var thatFieldsetTag = $(".js-fieldset"),
@@ -134,6 +135,7 @@ function checkNetwork() {
 }
 function appOnline() {
 	$(".js-html").removeClass("is-offline").addClass("is-online");
+//	$(".js-code").removeClass("is-active");
 }
 function appOffline() {
 	$(".js-html").removeClass("is-online").addClass("is-offline");
